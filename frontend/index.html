@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Species Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Iris Classifier</h1>
+            <p>AI-Powered Botanical Identification</p>
+        </header>
+
+        <main>
+            <form id="predictionForm">
+                <div class="input-group">
+                    <label for="sepal_length">Sepal Length (cm)</label>
+                    <input type="number" id="sepal_length" name="sepal_length" step="0.1" min="0" value="5.1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="sepal_width">Sepal Width (cm)</label>
+                    <input type="number" id="sepal_width" name="sepal_width" step="0.1" min="0" value="3.5" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="petal_length">Petal Length (cm)</label>
+                    <input type="number" id="petal_length" name="petal_length" step="0.1" min="0" value="1.4" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="petal_width">Petal Width (cm)</label>
+                    <input type="number" id="petal_width" name="petal_width" step="0.1" min="0" value="0.2" required>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span>Classify Flower</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div id="result" class="result-card hidden">
+                <h2>Prediction Result</h2>
+                <div class="prediction-content">
+                    <span class="label">Species:</span>
+                    <span id="speciesName" class="value">Setosa</span>
+                </div>
+                <div class="prediction-meta">
+                    <span class="label">Class ID:</span>
+                    <span id="classId" class="value">0</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
