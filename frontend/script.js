@@ -24,7 +24,7 @@ document.getElementById('predictionForm').addEventListener('submit', async (e) =
         // Send request to backend
         // Note: In Docker Compose, we might need to adjust the URL if accessing from browser vs container.
         // For browser access, localhost:7001 is correct if mapped.
-        const response = await fetch('http://localhost:7001/predict', {
+        const response = await fetch('http://18.206.13.3:7001/predict', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
